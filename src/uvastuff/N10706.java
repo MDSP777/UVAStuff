@@ -32,7 +32,6 @@ public class N10706 {
 
     private static int valAt(int index) {
         int l = Collections.binarySearch(end, index);
-        System.out.println("BinarySearch Index: " + l);
         if(l<0) l = -(l+1);
         if(l==0) return 1;
         int left = end.get(l-1)+1;
@@ -47,9 +46,6 @@ public class N10706 {
             add.append(ctr++);
         }
         String out = add.toString();
-        System.out.println("Index: "+index);
-        System.out.println(end.get(l-1));
-        System.out.println(out.substring(out.length()-11));
         return Integer.parseInt(out.charAt(index)+"");
     }
 
